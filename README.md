@@ -14,8 +14,8 @@ Files:
 	tile.h 				Tile class header file
 
 	tile.cpp 			Contains all of the functions making up the
-						tile class. Allows for the manipulation of the
-						value of tiles.
+						tile class. Allows for the manipulation of
+						tile values.
 
 	gameBoard.h 		gameBoard class header file.
 						Contains variables to store the board size.
@@ -31,4 +31,3 @@ Notes:
 
 
 
-	

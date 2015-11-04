@@ -49,15 +49,13 @@ void gameBoard::newTile() {
 
 // prints the gameboard
 void gameBoard::printBoard() {
-
-        for (int i = 0; i < boardHeight; i++) {
-                for (int j = 0; j < boardWidth; j++) {
-                	board[i][j].printVal();
-                	cout << "	  ";
-                }
-                cout << endl;
+    for (int i = 0; i < boardHeight; i++) {
+        for (int j = 0; j < boardWidth; j++) {
+        	board[i][j].printVal();
+        	cout << "	  ";
         }
-
+        cout << endl;
+    }
 }
 						/*			     		 */
 						/*	   MOVE FUNCTIONS    */
@@ -105,8 +103,7 @@ void gameBoard::moveUp() {
 			}
 
 			if (row > 0) { // continues if not on the last row
-				// if tile meets an equal tile
-				if (board[row][j].getVal() != 0 && 
+				if (board[row][j].getVal() != 0 && //if tile meets an equal
 						board[row-1][j].getVal() == board[row][j].getVal()) {
 					board[row-1][j].doubleVal();
 					shouldAdd = board[row][j].makeZero();//new tile to be added

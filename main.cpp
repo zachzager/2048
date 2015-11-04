@@ -14,15 +14,16 @@
 #include <iostream>
 #include <stdio.h>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
-
 #include "gameBoard.h" // game board class
+#include "termfuncs.h" // includes functions from Tufts'
+                       // Intro to Comp Sci course
+                       // (namely getachar())
 
 using namespace std;
 
-int main(int argc, const char * argv[]) {
+int main() {
 
-        // create board object
-        gameBoard b;
+        gameBoard board; // create board object
 
         // Game Introduction and Directions
         cout << "WELCOME TO THIS 2048 TERMINAL CLONE!\n\n";
@@ -37,34 +38,24 @@ int main(int argc, const char * argv[]) {
         cout << "Press 'q' to quit the game.\n";
         cout << endl;
 
-        // create input variable
-        char input = 'p';
-
-        // print the board
-        b.printBoard();
+        char input = ' '; // create input variable
 
         // loops to run the game
         while (input != 'q') {
-
-                // asks for and stores input
+                board.printBoard(); // print the board
                 cout << "Input: ";
-                cin >> input;
+                input = getachar(); //player doesn't have to press enter
                 cout << endl;
 
-                // ends the game
-                if (input == 'q') {
+                if (input == 'q') { // ends the game
                         break;
                 } 
 
-                // continues the game
-                else {
-                        b.move(input);
+                else { // continues the game
+                        board.move(input);
                 }
-
-                b.printBoard(); // print the board
-
         }
-
+        board.printBoard(); // print the board
         return 0;
 }
 

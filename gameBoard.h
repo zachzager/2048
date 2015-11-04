@@ -1,4 +1,4 @@
-//
+ //
 //  gameBoard.h
 //  2048
 //
@@ -24,7 +24,7 @@ using namespace std;
 class gameBoard {
 	public:
 	    gameBoard();  		// constructor
-	    ~gameBoard(); 		// desctructor
+	    ~gameBoard(); 		// destructor
 	    void newTile();		// initializes a new tile
 	    void printBoard();  // prints the board
         void move(char direction); // move function
